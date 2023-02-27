@@ -1,9 +1,8 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 const Content = ({ data }) => {
-    console.log(data, "in data")
     return (
         <div>
             {
@@ -32,7 +31,9 @@ const Content = ({ data }) => {
 
                         </div>
                     )
-                }) : 'Something Went Wrong'
+                }) : <div className='flex min-h-full m-10 justify-center items-center'>
+                    <h1 className='text-2xl'>Something Went Wrong ! Try Again Later</h1>
+                </div>
             }
         </div>
     )
